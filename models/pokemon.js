@@ -6,6 +6,7 @@ const {Schema, model} = mongoose
 //create a schema, defines that shape of an object
 const pokemonSchema = new Schema({
     name: String,
+    img: String,
     type: Array,
     stats: Object
 })
