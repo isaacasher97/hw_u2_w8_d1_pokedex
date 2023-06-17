@@ -1,4 +1,5 @@
 const Router = require("express").Router
+const controller = require("../controllers/pokemon")
 
 const router = Router()
 
@@ -6,7 +7,7 @@ const router = Router()
 
 
 // index
-router.get("/", (req, res) => {res.send("not implemented yet")})
+router.get("/", controller.index)
 
 // show
 router.get("/:id", (req, res) => {res.send("not implemented yet")})
