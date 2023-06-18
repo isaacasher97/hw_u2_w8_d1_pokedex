@@ -44,5 +44,10 @@
                     <p>Steel: <%= pokemon.damages.steel %></p>
                 </li>
         </ul>
+
+        <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit <%= pokemon.name %></button></a>
+        <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
+            <input type="submit" value="DELETE">
+        </form>
 </body>
 </html>
