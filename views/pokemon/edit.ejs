@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <h1>Add a New Pokemon</h1>
-    <form action="/pokemon" method="post">
-        <input type="text" name="name" placeholder="Name of Pokemon" />
-        <input type="text" name="type" placeholder="Type of Pokemon" />
+    <h1>Edit A Current Pokemon</h1>
+    <form action="/pokemon/<%= pokemon._id %>?_method=put" method="post">
+        <input type="text" name="name" placeholder="Name of Pokemon" value="<%= pokemon.name %>" />
+        <input type="text" name="type" placeholder="Type of Pokemon" value="<%= pokemon.type %>" />
         <input type="submit" value="Add Pokemon to Pokedex" />
     </form>
     <a href="/pokemon"><button>Go Back To HQ</button></a>

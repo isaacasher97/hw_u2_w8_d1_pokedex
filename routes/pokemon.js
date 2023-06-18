@@ -12,19 +12,19 @@ router.get("/", controller.index)
 // new
 router.get("/new", controller.new)
 
-// show
-router.get("/:id", controller.show)
-
-// edit
-router.get("/:id/edit", (req, res) => {res.send("not implemented yet")})
-
-// create
-router.post("/", (req, res) => {res.send("not implemented yet")})
+// destroy
+router.delete("/:id", controller.destroy)
 
 // update
-router.put("/:id", (req, res) => {res.send("not implemented yet")})
+router.put("/:id", controller.update)
 
-// destroy
-router.delete("/:id", (req, res) => {res.send("not implemented yet")})
+// create
+router.post("/", controller.create)
+
+// edit
+router.get("/:id/edit", controller.edit)
+
+// show
+router.get("/:id", controller.show)
 
 module.exports = router
