@@ -1,9 +1,9 @@
 const index = require("./indexRoute")
-const newCartoon = require("./new")
+const newPokemon = require("./new")
 const show = require("./show")
 
 module.exports = {
     index,
-    new: newCartoon,
+    new: newPokemon,
     show
 }
