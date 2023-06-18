@@ -3,17 +3,17 @@ const controller = require("../controllers/pokemon")
 
 const router = Router()
 
-// my routes
+// my routes (INDUCES)
 
 
 // index
 router.get("/", controller.index)
 
-// show
-router.get("/:id", controller.show)
-
 // new
 router.get("/new", controller.new)
+
+// show
+router.get("/:id", controller.show)
 
 // edit
 router.get("/:id/edit", (req, res) => {res.send("not implemented yet")})

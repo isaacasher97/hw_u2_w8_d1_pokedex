@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Pokedex HQ</h1>
+    <a href="/pokemon/new"><button>Add A Pokemon</button></a>
     <h1><%= pokemon.name %> Profile Page</h1>
-    <a href="/pokemon/"><button>Go Back To HQ</button></a>
+    <a href="/pokemon"><button>Go Back To HQ</button></a>
     <a href="/pokemon/<%= pokemon._id %>">
     <h2><%= pokemon.name %></h2></a>
     <img src= "<%= pokemon.img %>">
