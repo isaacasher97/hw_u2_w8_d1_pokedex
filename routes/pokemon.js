@@ -10,10 +10,10 @@ const router = Router()
 router.get("/", controller.index)
 
 // show
-router.get("/:id", (req, res) => {res.send("not implemented yet")})
+router.get("/:id", controller.show)
 
 // new
-router.get("/new", (req, res) => {res.send("not implemented yet")})
+router.get("/new", controller.new)
 
 // edit
 router.get("/:id/edit", (req, res) => {res.send("not implemented yet")})

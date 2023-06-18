@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= pokemon.name %> Profile Page</h1>
+    <a href="/pokemon/"><button>Go Back To HQ</button></a>
+    <a href="/pokemon/<%= pokemon._id %>">
+    <h2><%= pokemon.name %></h2></a>
+    <img src= "<%= pokemon.img %>">
+    <h3>Type: <%= pokemon.type %></h3>
+        <ul>
+                <li>
+                    <h2>Stats</h2>
+                    <p>HP: <%= pokemon.stats.hp %></p>
+                    <p>Attack <%= pokemon.stats.attack %></p>
+                    <p>Defense: <%= pokemon.stats.defense %></p>
+                    <p>spAttack: <%= pokemon.stats.spattack %></p>
+                    <p>spDefense <%= pokemon.stats.spdefense %></p>
+                    <p>Speed: <%= pokemon.stats.speed %></p>
+                </li>
+                <li>
+                    <h2>Damages</h2>
+                    <p>Normal: <%= pokemon.damages.normal %></p>
+                    <p>Fire: <%= pokemon.damages.fire %></p>
+                    <p>Water: <%= pokemon.damages.water %></p>
+                </li>
+        </ul>
+</body>
+</html>
