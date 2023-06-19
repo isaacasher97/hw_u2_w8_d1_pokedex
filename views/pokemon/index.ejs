@@ -4,22 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex</title>
+    <link rel="icon" href="https://i.imgur.com/Oi0z3Dz.png" type="image/x-icon" />
+    <style>
+        body {
+            background-color: blueviolet;
+            text-align: center;
+        }
+        h1 {
+            font-family: cursive;
+            text-align: center;
+            background-color: cyan;
+        }
+        .pokeUl li {
+            display: inline-flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: bisque;
+            width: 20%;
+            border: 10px solid black;
+            margin: 10px auto;
+        }
+        .pokeUl img{
+            display: flex;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+        }
+        img {
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        .addButton > a > button {
+            padding: 10px;
+            display: inline;
+        }
+        .addButton > a {
+            text-decoration: none;
+        }
+
+    .addButton > a:hover {
+        text-decoration: underline;
+    }
+    </style>
 </head>
 <body>
     <h1>Pokedex HQ</h1>
-    <a href="/pokemon/new"><button>Add A Pokemon</button></a>
+    <div class="addButton"><a href="/pokemon/new"><button>Add A Pokemon</button></a></div>
+    <div class="pokeUl"> 
     <ul>
         <% pokemons.forEach((pokemon, index) => { %>
-
-            <li>
+            
+            <li class="innerContent">
                 <a href="/pokemon/<%= pokemon._id %>"><h2><%= pokemon.name %></h2></a>
                 <br><img src= "<%= pokemon.img %>">
-                <h3>Type: <%= pokemon.type %></h3>
             </li>
-
+            
      <% }) %>
     </ul>
-
+</div> 
 </body>
 </html>
