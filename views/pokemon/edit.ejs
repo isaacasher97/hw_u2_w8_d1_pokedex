@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit <%= pokemon.name %></title>
 </head>
 <body>
 
@@ -12,6 +12,13 @@
     <form action="/pokemon/<%= pokemon._id %>?_method=put" method="post">
         <input type="text" name="name" placeholder="Name of Pokemon" value="<%= pokemon.name %>" />
         <input type="text" name="type" placeholder="Type of Pokemon" value="<%= pokemon.type %>" />
+        <h4 style="text-decoration: underline;">Stats</h4>
+        <input type="number" name="hp" placeholder="Amount of hp" value="<%= pokemon.stats.hp %>" />
+        <input type="number" name="attack" placeholder="Amount of Attack" value="<%= pokemon.stats.attack %>" />
+        <input type="number" name="defense" placeholder="Amount of Defense" value="<%= pokemon.stats.defense %>" />
+        <input type="number" name="spattack" placeholder="Amount of spAttack" value="<%= pokemon.stats.spattack %>" />
+        <input type="number" name="spdefense" placeholder="Amount of spDefense" value="<%= pokemon.stats.spdefense %>" />
+        <input type="number" name="speed" placeholder="Speed of Pokemon" value="<%= pokemon.stats.speed %>" />
         <input type="submit" value="Add Pokemon to Pokedex" />
     </form>
     <a href="/pokemon"><button>Go Back To HQ</button></a>

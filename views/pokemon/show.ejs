@@ -4,18 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex HQ</title>
+    <link rel="icon" href="https://i.imgur.com/Oi0z3Dz.png" type="image/x-icon" />
+    <style>
+        h1 {
+            text-align: center;
+            background-color: cyan;
+        }
+
+        a {
+            text-align: center;
+        }
+        button {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: cyan;
+            overflow: auto;
+            height: 200px;
+            justify-content: space-evenly;
+
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        form {
+            display: inline;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            background-color: beige;
+        }
+        .pokeImg {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pokedex HQ</h1>
-    <a href="/pokemon/new"><button>Add A Pokemon</button></a>
-    <h1><%= pokemon.name %> Profile Page</h1>
-    <a href="/pokemon"><button>Go Back To HQ</button></a>
+    <h1>Pokedex HQ<br><%= pokemon.name %> Profile Page</h1>
+    <div class="buttons">
+        <a href="/pokemon/new"><button>Add A Pokemon</button></a>
+        <a href="/pokemon"><button>Go Back To HQ</button></a>
+        <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit <%= pokemon.name %></button></a>
+        <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
+            <input type="submit" value="DELETE">
+        </form>
+    </div>
     <a href="/pokemon/<%= pokemon._id %>">
     <h2><%= pokemon.name %></h2></a>
-    <img src= "<%= pokemon.img %>">
-    <h3>Type: <%= pokemon.type %></h3>
+   <div class="pokeImg"><img src= "<%= pokemon.img %>"></div>
         <ul>
+                <li>
+                    <h2>Type:<br> <%= pokemon.type %></h2></div>
+                </li>
                 <li>
                     <h2>Stats</h2>
                     <p>HP: <%= pokemon.stats.hp %></p>
@@ -46,10 +95,5 @@
                     <p>Steel: <%= pokemon.damages.steel %></p>
                 </li>
         </ul>
-
-        <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit <%= pokemon.name %></button></a>
-        <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
-            <input type="submit" value="DELETE">
-        </form>
 </body>
 </html>
