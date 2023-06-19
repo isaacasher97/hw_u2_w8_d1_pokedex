@@ -7,16 +7,22 @@
     <title>Pokedex HQ</title>
     <link rel="icon" href="https://i.imgur.com/Oi0z3Dz.png" type="image/x-icon" />
     <style>
+        body {
+            background-color: blueviolet;
+        }
         h1 {
+            font-family: cursive;
             text-align: center;
             background-color: cyan;
         }
-
+        h2 {
+            font-family: cursive;
+        }
         a {
             text-align: center;
-        }
-        button {
-            text-align: center;
+            text-decoration: none;
+            color: antiquewhite;
+            font-size: 30px;
         }
         ul {
             display: flex;
@@ -40,6 +46,18 @@
             justify-content: space-evenly;
             width: 100%;
             background-color: beige;
+            padding: 10px;
+        }
+        .buttons > a > button {
+          background-color: brown;
+          color: antiquewhite;
+        }
+        li > form > input {
+            background-color: brown;
+            color: antiquewhite;
+        }
+        li > p {
+            font-family: fantasy;
         }
         .pokeImg {
             display: flex;
@@ -54,16 +72,16 @@
         <a href="/pokemon/new"><button>Add A Pokemon</button></a>
         <a href="/pokemon"><button>Go Back To HQ</button></a>
         <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit <%= pokemon.name %></button></a>
-        <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
-            <input type="submit" value="DELETE">
-        </form>
     </div>
     <a href="/pokemon/<%= pokemon._id %>">
     <h2><%= pokemon.name %></h2></a>
    <div class="pokeImg"><img src= "<%= pokemon.img %>"></div>
         <ul>
                 <li>
-                    <h2>Type:<br> <%= pokemon.type %></h2></div>
+                    <h2>Type:<br> <%= pokemon.type %></h2></div><br><br>
+                    <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
+                        <input type="submit" value="DELETE">
+                    </form>
                 </li>
                 <li>
                     <h2>Stats</h2>
