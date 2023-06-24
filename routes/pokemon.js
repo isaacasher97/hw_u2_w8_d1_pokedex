@@ -16,7 +16,7 @@ router.get("/new", controller.new)
 router.delete("/:id", controller.destroy)
 
 // update
-router.put("/:id", controller.update);
+router.put("/:id", controller.update)
 
 // create
 router.post("/", controller.create)
