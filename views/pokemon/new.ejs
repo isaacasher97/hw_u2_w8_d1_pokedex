@@ -5,21 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blueviolet;
+            font-family: cursive;
+        }
+        .headings {
+
+            color: antiquewhite;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+        input {
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            border: 8px solid black;
+            border-radius: 10px;
+        }
+        #submitButton {
+            color: red;
+            font-size: 20px;
+        }
+        button {
+            font-size: 20px;
+            font-family: cursive;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Add a New Pokemon</h1>
+    <h1 class = "headings">Add a New Pokemon</h1>
+    <h2 class="headings">Enter Info Below</h2>
     <form action="/pokemon" method="POST">
-        <input type="text" name="name" placeholder="Name of Pokemon" />
-        <input type="text" name="type" placeholder="Type of Pokemon" />
-        <h4 style="text-decoration: underline;">Stats</h4>
+        <input type="text" name="name" placeholder="Name of Pokemon" /><br/>
+        <input type="text" name="type" placeholder="Type of Pokemon" /><br/>
+        <h2 class="headings" style="text-decoration: underline;">Add Stats</h2>
         <input type="number" name="hp" placeholder="Amount of hp" />
         <input type="number" name="attack" placeholder="Amount of Attack" />
         <input type="number" name="defense" placeholder="Amount of Defense" />
         <input type="number" name="spattack" placeholder="Amount of spAttack" />
         <input type="number" name="spdefense" placeholder="Amount of spDefense" />
         <input type="number" name="speed" placeholder="Speed of Pokemon" />
-        <input type="submit" value="Add Pokemon to Pokedex" />
+        <input type="submit" id="submitButton" value="Add Pokemon to Pokedex" />
     </form>
     <a href="/pokemon"><button>Go Back To HQ</button></a>
 </body>
