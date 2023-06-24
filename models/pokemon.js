@@ -8,7 +8,14 @@ const pokemonSchema = new Schema({
   name: String,
   img: String,
   type: [String],
-  stats: Object,
+  stats: {
+    hp: String,
+    attack: String,
+    defense: String,
+    spattack: String,
+    spdefense: String,
+    speed: String
+},
   damages: {
     type: {
       normal: String,

@@ -1,7 +1,7 @@
 const pokemonRoutes = require("../routes/pokemon")
 
-function registerConstrollers(app) {
+function registerControllers(app) {
     app.use("/pokemon", pokemonRoutes)
 }
 
-module.exports = registerConstrollers
+module.exports = registerControllers
